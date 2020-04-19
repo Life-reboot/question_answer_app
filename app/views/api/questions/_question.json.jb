@@ -1,7 +1,13 @@
 {
   id: question.id,
-  user_id: question.user_id,
+  user: {
+    id: question.user.id,
+    name: question.user.name,
+    email: question.user.email,
+  },
   title: question.title,
   body: question.body,
-  answers: question.answers,
+  answers: question.answers.map do |answer|
+    render partial: "/api/answers/answer.json.jb", locals: { answer: answer }
+  end,
 }

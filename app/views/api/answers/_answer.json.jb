@@ -1,6 +1,10 @@
 {
   id: answer.id,
-  user_id: answer.user_id,
-  question: answer.question,
+  user: {
+    id: answer.user.id,
+    name: answer.user.name,
+    email: answer.user.email,
+  },
+  question_id: answer.question_id,
   body: answer.body,
 }
