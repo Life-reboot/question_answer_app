@@ -1,0 +1,6 @@
+{
+  id: question.id,
+  user_id: question.user_id,
+  title: question.title,
+  body: question.body,
+}
