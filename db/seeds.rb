@@ -1,7 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create!(name: "Bridgekeeper", email: "bridgekeeper@example.com", password: "password")
+User.create!(name: "Lancelot", email: "lancelot@example.com", password: "password")
+User.create!(name: "Robin", email: "robin@example.com", password: "password")
+User.create!(name: "Galahad", email: "galahad@example.com", password: "password")
+User.create!(name: "Arthur", email: "arthur@example.com", password: "password")
+
+Question.create!(user_id: 1, title: "What... is your name?", body: "Yawl American Main Spanish Main doubloon nipperkin brigantine chase Jolly Roger interloper chase guns. Tack yardarm blow the man down six pounders schooner topgallant handsomely landlubber or just lubber come about tender. Sheet keel fire ship quarterdeck Corsair galleon hardtack lee Spanish Main boom.")
+Question.create!(user_id: 1, title: "What... is your quest?", body: "Draft scuttle belay cable lanyard fire in the hole marooned grog blossom Chain Shot measured fer yer chains. Spirits sheet interloper lanyard spanker mizzenmast hang the jib grog blossom hearties league. No prey, no pay loaded to the gunwalls blow the man down lee landlubber or just lubber take a caulk scurvy Corsair poop deck square-rigged.")
+Question.create!(user_id: 1, title: "What... is your favorite color?", body: "Coffer tackle aye squiffy Sail ho piracy hornswaggle boom killick handsomely. Pinnace Spanish Main deadlights mizzenmast bowsprit Admiral of the Black mizzen weigh anchor case shot Yellow Jack. Boom handsomely walk the plank bilge rat rutters run a shot across the bow starboard case shot topgallant Sail ho.")
+Question.create!(user_id: 1, title: "What... is the capital of Assyria?", body: "Pirate Round deadlights Sink me hands jolly boat pirate hornswaggle careen chase run a rig. Jolly boat draught fire ship pink Cat o'nine tails hempen halter black spot scourge of the seven seas poop deck lass. Snow bilge rat Blimey fathom flogging Jolly Roger strike colors mutiny main sheet chase guns.")
+Question.create!(user_id: 1, title: "What... is the air-speed velocity of an unladen swallow?", body: "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.")
+
+Answer.create!(user_id: 2, question_id: 1, body: "My name is 'Sir Lancelot of Camelot'.")
+Answer.create!(user_id: 2, question_id: 2, body: "To seek the Holy Grail.")
+Answer.create!(user_id: 2, question_id: 3, body: "Blue.")
+Answer.create!(user_id: 3, question_id: 1, body: "Sir Robin of Camelot.")
+Answer.create!(user_id: 3, question_id: 2, body: "To seek the Holy Grail.")
+Answer.create!(user_id: 3, question_id: 4, body: "I don't know that!")
+Answer.create!(user_id: 4, question_id: 1, body: "Sir Galahad of Camelot.")
+Answer.create!(user_id: 4, question_id: 2, body: "I seek the grail.")
+Answer.create!(user_id: 4, question_id: 3, body: "Blue. No, yel--")
+Answer.create!(user_id: 5, question_id: 1, body: "It is 'Arthur', King of the Britons.")
+Answer.create!(user_id: 5, question_id: 2, body: "To seek the Holy Grail.")
+Answer.create!(user_id: 5, question_id: 5, body: "What do you mean? An African or European swallow?")
